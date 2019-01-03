@@ -1,0 +1,25 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <div class="wrapper">
+    <ng-container *ngFor="let product of productList">
+
+          <div style="border-style: outset;width: 384px;height: 371px;">
+              <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                  <div class="card">
+                      <div style="width: 310px; height: 162px; margin-top: 10px;" >
+                         <img src="{{product.imageUrl}}" class="img-fluid " style="width:138px;height:170px;margin-left:56px;" alt="Card image cap">
+                       </div>
+                       <div class="card-body">
+                          <h3 class="card-title">{{product.name}}</h3>
+                          <p><strong>Price: </strong>{{product.price}}</p>
+                          <p> <strong>Description: </strong>{{product.description}}</p>
+
+                          <button (click)="addProduct(product)" class="btn btn-primary">Add</button>
+                       </div>
+                  </div>
+              </div>
+          </div>
+
+    </ng-container>
+  </div>
+</div>
