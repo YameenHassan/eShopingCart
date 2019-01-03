@@ -2,6 +2,7 @@ import { Component, OnInit , AfterViewInit} from '@angular/core';
 import { Router} from '@angular/router';
 import { ProductList } from '../../home/model/product-list';
 import { ProductService } from '../../home/service/product.service';
+declare var $: any;
 
 @Component({
   selector: 'checkout',
