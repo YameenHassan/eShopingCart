@@ -13,25 +13,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit(){ }
 
-  goToCart() {
-    sessionStorage.setItem("isSuccess", 'false');
-    this.success = sessionStorage.getItem("isSuccess");
-    window.location.href = "view-cart";
-
-  }
-
-  goToProductList() {
-    sessionStorage.setItem("isSuccess", 'false');
-    this.success = sessionStorage.getItem("isSuccess");
-    window.location.href = "";
-
-  }
-
-  goToProductCheckout(){
-    sessionStorage.setItem("isSuccess", 'false');
-    this.success = sessionStorage.getItem("isSuccess");
-    window.location.href = "product-checkout";
-  }
 
   clearSelection(){
     sessionStorage.clear();
