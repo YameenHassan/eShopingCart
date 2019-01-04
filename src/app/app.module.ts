@@ -1,23 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule }   from '@angular/forms';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeModule } from './modules/home/home.module';
-import { CheckoutModule } from './modules/checkout/checkout.module';
-import {ViewCartModule} from "./modules/view-cart/view-cart.module"
-import { HttpClientModule }    from '@angular/common/http';
+import { HomeComponent } from './modules/home/component/home.component';
+import { CheckoutComponent } from './modules/checkout/component/checkout.component';
+import { ViewCartComponent } from './modules/view-cart/component/view-cart.component';
+import { SubmitComponent } from './modules/checkout/component/submit.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    CheckoutComponent,
+    SubmitComponent,
+    ViewCartComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HomeModule,
-    CheckoutModule,
-    ViewCartModule,
+    FormsModule,
     HttpClientModule
   ],
   providers: [],
