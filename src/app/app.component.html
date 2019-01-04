@@ -4,14 +4,15 @@
   <h1>   My Watch My Style  </h1>
 
 <div *ngIf="success === 'false'">
-  <ul id="user-menu" class="tabrow">
-    <li class="active" id="home" ><a (click)="goToProductList()" onclick="return false;">Home</a></li>
-    <li  id="cart"><a (click)="goToCart()" onclick="return false;">View Cart</a></li>
-    <li id="checkout"><a (click)="goToProductCheckout()" onclick="return false;" >Checkout</a></li>
-    <li  style="float:right; background-color: dodgerblue;"><a (click)="clearSelection()" >Clear Selection</a></li>
-  </ul>
-
+ 
+    <ul id="user-menu" class="tabrow">
+      <li class="active" id="home" ><a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+      <li  id="cart"><a routerLink="/view-cart" routerLinkActive="active">View Cart</a></li>
+      <li id="checkout"><a routerLink="/product-checkout" routerLinkActive="active">Checkout</a></li>
+      <li  style="float:right; background-color: dodgerblue;"><a (click)="clearSelection()" >Clear Selection</a></li>
+    </ul>
 </div>
+
 
 <router-outlet></router-outlet>
 </div>
